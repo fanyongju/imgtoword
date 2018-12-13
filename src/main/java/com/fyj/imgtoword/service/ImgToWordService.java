@@ -25,7 +25,7 @@ public class ImgToWordService {
     @PostConstruct
     private void initAipOcr() {
         client = new AipOcr("11935153", "mKYoPpsdCb5NqLw2XInE7QR9", "nvT8IL7F7oQgqqmZ5XrOhks0XXFtHeto");
-        options = new HashMap<>();
+        options = new HashMap<>(4);
         options.put("language_type", "CHN_ENG");
         options.put("detect_direction", "true");
         options.put("detect_language", "true");
@@ -34,9 +34,9 @@ public class ImgToWordService {
 
     public String imgToWord(byte[] image) throws IOException {
         JSONObject res = client.basicAccurateGeneral(image, options);
-        JsonNode words_result = objectMapper.readTree(res.toString()).get("words_result");
+        JsonNode wordsResult = objectMapper.readTree(res.toString()).get("words_result");
         StringBuilder words = new StringBuilder();
-        for(JsonNode wordNode : words_result){
+        for(JsonNode wordNode : wordsResult){
             words.append(wordNode.get("words").asText());
         }
         return words.toString();

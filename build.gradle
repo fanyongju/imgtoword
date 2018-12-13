@@ -27,6 +27,7 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
-            'com.baidu.aip:java-sdk:4.6.0')
+            'com.baidu.aip:java-sdk:4.6.0',
+            'net.jodah:expiringmap:0.5.8')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
