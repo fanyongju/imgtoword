@@ -2,17 +2,10 @@ package com.fyj.imgtoword;
 
 import net.jodah.expiringmap.ExpirationPolicy;
 import net.jodah.expiringmap.ExpiringMap;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest
 public class ImgtowordApplicationTests {
     public static ExpiringMap<String, String> map = ExpiringMap.builder().expiration(5000, TimeUnit.MILLISECONDS)
             .expirationPolicy(ExpirationPolicy.CREATED)
