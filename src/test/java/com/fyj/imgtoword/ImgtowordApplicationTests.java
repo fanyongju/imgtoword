@@ -19,6 +19,7 @@ public class ImgtowordApplicationTests {
     }
 
     public static void process() {
+        //我在修复bug
         System.out.println(map.hashCode());
         map.put("key", "value");
         System.out.println(Thread.currentThread().getName() + " key:" + map.get("key"));
