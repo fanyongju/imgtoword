@@ -46,7 +46,7 @@ public class Connection {
     public String getStatusCodeReply() {
         byte[] bytes = new byte[1024];
         try {
-            socket.getInputStream().read(bytes);
+            inputStream.read(bytes);
         } catch (IOException e) {
             e.printStackTrace();
         }

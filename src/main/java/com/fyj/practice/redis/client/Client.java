@@ -5,7 +5,7 @@ import com.fyj.practice.redis.protocol.Protocol;
 
 /**
  * @author fanyongju
- * @Title: Client Api层
+ * @Title: Client Api层(提供给用户包装好的接口)
  * @date 2019/1/8 11:33
  */
 public class Client {
