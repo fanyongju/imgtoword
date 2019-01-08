@@ -1,7 +1,7 @@
-package com.fyj.imgtoword.practice.proxy.core;
+package com.fyj.practice.proxy.core;
 
-import com.fyj.imgtoword.practice.proxy.entity.Animal;
-import com.fyj.imgtoword.practice.proxy.entity.Dog;
+import com.fyj.practice.proxy.entity.Animal;
+import com.fyj.practice.proxy.entity.Dog;
 
 /**
  * @author fanyongju

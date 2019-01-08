@@ -1,4 +1,4 @@
-package com.fyj.imgtoword.practice.proxy.core;
+package com.fyj.practice.proxy.core;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.fyj.imgtoword.practice.copy;
+package com.fyj.practice.copy;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;

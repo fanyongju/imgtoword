@@ -1,4 +1,4 @@
-package com.fyj.imgtoword.practice.proxy.entity;
+package com.fyj.practice.proxy.entity;
 
 /**
  * @author fanyongju
