@@ -29,6 +29,8 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-thymeleaf',
             'com.baidu.aip:java-sdk:4.6.0',
             'redis.clients:jedis:2.9.0',
-            'net.jodah:expiringmap:0.5.8')
+            'net.jodah:expiringmap:0.5.8',
+            'org.apache.commons:commons-lang3:3.7',
+            'ch.ethz.ganymed:ganymed-ssh2:build210')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
