@@ -31,6 +31,6 @@ public class ProcessController {
             e.printStackTrace();
         }
         model.addAttribute("result",result);
-        return "out";
+        return "imgtoword/out";
     }
 }
