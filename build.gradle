@@ -27,7 +27,9 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
+            'org.springframework.kafka:spring-kafka',
             'com.baidu.aip:java-sdk:4.6.0',
+            'org.springframework.data:spring-data-redis:2.0.8.RELEASE',
             'redis.clients:jedis:2.9.0',
             'net.jodah:expiringmap:0.5.8',
             'org.apache.commons:commons-lang3:3.7',

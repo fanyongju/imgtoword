@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description: TODO
  * @date 2018/9/1415:14
  */
-@Controller
+//@Controller
 public class IndexController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {

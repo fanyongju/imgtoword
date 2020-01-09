@@ -3,7 +3,9 @@ package com.fyj.imgtoword.controller;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fyj.imgtoword.service.ImgToWordService;
+import com.fyj.imgtoword.util.GZIPUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 
 /**
@@ -25,6 +36,24 @@ public class TestController {
     private ObjectMapper objectMapper;
     @Autowired
     private ImgToWordService imgToWordService;
+
+    @GetMapping(value = "/ad.xml", produces = MediaType.APPLICATION_XML_VALUE)
+    public String ad(HttpServletResponse response) throws Exception{
+        response.setHeader("access-control-allow-headers", "Origin, X-Requested-With, Content-Type, Accept, Range");
+        response.setHeader("access-control-allow-credentials", "true");
+        response.setHeader("access-control-allow-origin", "https://www.radiantmediaplayer.com");
+        File file = new File("E:\\Project\\imgtoword\\file\\ad.xml");
+        if (!file.exists()) {
+            return null;
+        }
+        FileInputStream inputStream = new FileInputStream(file);
+        int length = inputStream.available();
+        byte bytes[] = new byte[length];
+        inputStream.read(bytes);
+        inputStream.close();
+        String xml = new String(bytes, StandardCharsets.UTF_8);
+        return xml;
+    }
 
     @GetMapping("/data")
     public String data(String start, String end, String group) {

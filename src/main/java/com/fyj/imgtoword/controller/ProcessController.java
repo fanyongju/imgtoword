@@ -16,7 +16,7 @@ import java.io.IOException;
  * @Description: TODO
  * @date 2018/9/1014:21
  */
-@Controller
+//@Controller
 public class ProcessController {
     @Autowired
     private ImgToWordService imgToWordService;
